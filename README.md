@@ -14,6 +14,7 @@ microplastic-detection/
 ├─ results/ # metrics reports, confusion matrix, detections
 ├─ src/ # source code
 │ ├─ augment_balance.py
+| | augmentations_util.py
 │ ├─ dataset.py
 │ ├─ detect.py
 │ ├─ export.py
@@ -30,7 +31,7 @@ microplastic-detection/
 ## ⚙️ 1. Environment Setup (PowerShell)
 
 ```powershell
-# Create virtual environment
+# Create virtual environment, if you already have skip and activate venv
 python -m venv .venv
 
 # Activate venv
@@ -45,18 +46,45 @@ pip install -r requirements.txt
 # Fix execution policy if activation fails
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 
-# Balance "algae" class up to 200 images
-python src\augment_balance.py --input .\data --outdir .\data_balanced --class algae --target 200 --use_clahe
+#For testing the bounding boxes with the raw images or change data_yolo to data_yolo_balanced to test augmented set etc
+.venv\Scripts\python.exe src\visual_check.py --input data_yolo_preprocessed --num 5
 
-# Balance "microplastics" class up to 200 images
-python src\augment_balance.py --input .\data --outdir .\data_balanced --class microplastics --target 200 --use_clahe
+# Balance "algae" class
+python src/augment_balance.py --task classification --input ./data --outdir ./data_balanced --class algae --target 2000 --use_clahe
 
-# Resize to 224x224, normalize, output into data_preprocessed/
-python src\preprocess.py --input .\data_balanced --output .\data_preprocessed --resize 224
+# Balance "microplastics" class
+python src/augment_balance.py --task classification --input ./data --outdir ./data_balanced --class microplastics --target 2000 --use_clahe
 
-# Auto 80/20 split, 20 epochs, batch size 16, learning rate 2e-4
-python src\train.py --data .\data_preprocessed --auto_split --val_ratio 0.2 `
-    --epochs 20 --batch_size 16 --lr 2e-4 --output_model classifier.pth
+# Balance detection dataset to 2000 images
+python src/augment_balance.py --task detection --input ./data_yolo --outdir ./data_yolo_balanced --target 4000 --use_clahe
+
+# Resize to 224x224, normalize, output into data_preprocessed/ for classification
+python src/preprocess.py --task classification --input ./data_balanced --outdir ./data_preprocessed --keep-structure --no-flatten
+
+# Resize to 224x224, normalize, output into ./data_yolo_preprocessed for detection
+python src/preprocess.py --task detection --input ./data_yolo_balanced --outdir ./data_yolo_preprocessed --no-flatten
+
+# Classification Training, Auto 70/15/15 split, 20 epochs, batch size 16, learning rate 2e-4 for unix
+python src/train.py --task classification \
+    --data ./data_preprocessed \
+    --auto_split \
+    --epochs 20 \
+    --batch_size 16 \
+    --lr 2e-4 \
+    --output_model classifier.pth
+# Classification Training, Auto 70/20/10 split, 20 epochs, batch size 16, learning rate 2e-4 for meow
+    python src/train.py --task classification --data ./data_preprocessed --auto_split --epochs 20 --batch_size 16 --lr 2e-4 --output_model classifier.pth
+
+
+# Detection Training, Auto 70/20/10 split, 20 epochs, batch size 16, learning rate 2e-4
+python src/train.py --task classification \
+    --data ./data_preprocessed \
+    --auto_split \
+    --epochs 20 \
+    --batch_size 16 \
+    --lr 2e-4 \
+    --output_model classifier.pth
+
 
 # Generate accuracy, precision, recall, F1 + confusion matrix
 python src\metrics.py --data .\data_preprocessed --weights classifier.pth `
