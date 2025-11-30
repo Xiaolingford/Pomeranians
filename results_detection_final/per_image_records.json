@@ -1,0 +1,1826 @@
+[
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_009.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7220065593719482
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_076974.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9130525588989258
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_077874.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8418734669685364
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_0796844.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8325693011283875
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_0987.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.770095705986023
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_10.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6887089610099792
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_11.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6847425103187561
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_12.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8477354645729065
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240604_175841.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9175439476966858
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240604_180335.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8628473281860352
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240604_180400.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8846442103385925
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240604_180448.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7992799878120422
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240605_145944.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7790595293045044
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240607_100413.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8450186252593994
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240607_100606.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.850394070148468
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240607_110315.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9072096943855286
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240607_115339.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8043028116226196
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240607_122916.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7924774289131165
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240607_123502.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8291895389556885
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240607_152709.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9368725419044495
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240607_163251.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.5308091640472412
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240607_170349.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6693230271339417
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240607_170417.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7666875123977661
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240618_181418.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9165863394737244
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_120240905_175015.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.872465968132019
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_1212122.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.875860869884491
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_122221.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.789391815662384
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_12322.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7355345487594604
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_12345.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8403494358062744
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_167.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8101133704185486
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_1892.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8014308214187622
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240524_111442.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.680181086063385
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240527_114143.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.693325936794281
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240604_170946.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8025550246238708
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240604_171010.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7559615969657898
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240604_171102.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6513421535491943
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240604_180448.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8745558261871338
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240605_160945.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8890640139579773
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240607_100413.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7564697265625
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240607_113813.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7436065077781677
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240607_114343.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8720961809158325
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240607_123502.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7408974766731262
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240607_123651.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7583627104759216
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240607_163251.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.5291777849197388
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240607_164320.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8423883318901062
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240607_164423.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7955390214920044
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240607_170946.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8985329270362854
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240607_171824.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8664243221282959
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_20240702_113753.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7228641510009766
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_555.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7825115323066711
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_7546524.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7880138158798218
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_766565.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9397446513175964
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_767452.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.850653350353241
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_7685653.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8667964935302734
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_76856563.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8032776117324829
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_7686563.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9240329265594482
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_78775.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9059601426124573
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_809786745.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.828301191329956
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_886564.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8568297624588013
+  },
+  {
+    "image": "1077191_algae dataset 2025-09-22 16-34-24_8985653.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9117642641067505
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240221_143828.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mean_iou": 0.0
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240223_124513.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6202170252799988
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240223_134003.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7534668445587158
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240223_144818.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8604206442832947
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240223_150303.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7170150279998779
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240227_101519.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8262155652046204
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240227_113331.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6950696706771851
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240227_134658.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6524629592895508
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240228_135122.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9368187785148621
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240228_140015.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8515967726707458
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240308_152753.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6050006747245789
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240311_101214.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.828508734703064
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240311_111558.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mean_iou": 0.0
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240312_150429.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mean_iou": 0.0
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240312_155018.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mean_iou": 0.0
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240312_162952.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9397978186607361
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240312_163519.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7747666239738464
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240312_165115.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6602790355682373
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240404_152252.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7055109143257141
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240404_155149.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mean_iou": 0.0
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240405_114913.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8579064011573792
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240424_170532.jpg",
+    "n_gt": 3,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.3333333322222222,
+    "mean_iou": 0.880583643913269
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240425_154524.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7422114610671997
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240426_112446.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7708935737609863
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240426_115257.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9036087989807129
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240426_121741.jpg",
+    "n_gt": 2,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.4999999975,
+    "mean_iou": 0.8718280792236328
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240426_152300.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9230085015296936
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240426_153653.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8336732387542725
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240430_154452.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mean_iou": 0.0
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240430_164008.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9211157560348511
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240430_171308.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7643305659294128
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240430_172412.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mean_iou": 0.0
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240430_173453.jpg",
+    "n_gt": 2,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.4999999975,
+    "mean_iou": 0.5672901272773743
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240430_174352.jpg",
+    "n_gt": 3,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.3333333322222222,
+    "mean_iou": 0.6820695400238037
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240501_150058.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7448015809059143
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240501_150700.jpg",
+    "n_gt": 2,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.4999999975,
+    "mean_iou": 0.669296145439148
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240501_161459.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.5590989589691162
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240502_162625.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7353694438934326
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240502_170642.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.5679638385772705
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240502_170724.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mean_iou": 0.0
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240502_180735.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8698771595954895
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240502_182917.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7890353798866272
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240503_110208.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.550211489200592
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240503_112031.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8047472238540649
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240503_112258.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7073418498039246
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240506_142405.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7084174752235413
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240506_145437.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9364104866981506
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240506_150306.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7997496128082275
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240506_153434.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8089742660522461
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240506_160824.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7427371740341187
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240506_172544.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8661141395568848
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240506_174552.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6808795928955078
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_20240506_174618.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6630659699440002
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_5656.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6128301620483398
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_7989887.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.752322793006897
+  },
+  {
+    "image": "1077192_filament data set same date as algae dataset_9668753.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7666122913360596
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_120240312_152621.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.764212965965271
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_120240514_120924.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8697854280471802
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_120240514_191653.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6855494976043701
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_120240528_121005.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8074081540107727
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240221_135259.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.5940794944763184
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240312_155943.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8714445233345032
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240425_160339.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7835816144943237
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240426_112329.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.609891414642334
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240426_153908.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9476224780082703
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240430_165949.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7904112339019775
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240501_151211.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8312288522720337
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240502_161600.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7262857556343079
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240502_164245.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7185068130493164
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240502_175729.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8435794711112976
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240506_165729.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6997910737991333
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240506_172304.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6625328063964844
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240508_150611.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7435441017150879
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240520_153717.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.670784592628479
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240521_182035.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9281163811683655
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240524_111017.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8839256167411804
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240604_144746.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8114231824874878
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240614_144105.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mean_iou": 0.0
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240618_111151.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7518806457519531
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240627_161347.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6573434472084045
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240627_161808.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7602062225341797
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240627_162138.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6870220303535461
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240627_164154.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6946758031845093
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240703_151443.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.5665484666824341
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_20240905_155845.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6279864311218262
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_234324234.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8321734666824341
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_2343244.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6565604209899902
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_2422.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8985013365745544
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_24562465.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.556078314781189
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_3243445.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8505194783210754
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_3423443.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7879323363304138
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_342423243.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7804943919181824
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_43324423.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8396569490432739
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_43432.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7900704145431519
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_4354324.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7400776147842407
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_435433423.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8666328191757202
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_45354.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9173272848129272
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_45434535445.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.810074508190155
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_524652654.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6583248972892761
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_54543.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7905106544494629
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_5464643.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.5733369588851929
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_6245624654.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.5271145105361938
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_6546364.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7613371014595032
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_65465435.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7115865349769592
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_6757526.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6712294220924377
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_8768686.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9204630851745605
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_88668798.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9045457243919373
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_hnhhg.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7521060705184937
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_myjmjh.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7238918542861938
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_vdfvf.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8240876793861389
+  },
+  {
+    "image": "1077193_fragment dataset 2025-09-22 16-48-34_wy6732.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8507184982299805
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_1.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9606861472129822
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_1111.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9151313900947571
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_111111111.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8853144645690918
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_120240227_114043.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mean_iou": 0.0
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_120240227_142217.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.0,
+    "recall": 0.0,
+    "mean_iou": 0.0
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_12312323.jpg",
+    "n_gt": 1,
+    "n_pred": 4,
+    "precision": 0.249999999375,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6231337785720825
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240227_142217.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7171501517295837
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240228_152419.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7836576104164124
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240311_111106.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6404740810394287
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240312_144123.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7924391627311707
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240312_155844.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8676933646202087
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240425_145047.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8288280367851257
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240430_170111.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.795953094959259
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240501_144501.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6998225450515747
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240501_161240.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8776933550834656
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240506_171019.jpg",
+    "n_gt": 1,
+    "n_pred": 4,
+    "precision": 0.249999999375,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7153748273849487
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240506_171812.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7669564485549927
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240506_171928.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7882165312767029
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240507_132537.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8374531865119934
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240508_144633.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8203131556510925
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240508_153402.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7467546463012695
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240508_155152.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8346648216247559
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240513_101228.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6026800870895386
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240516_154630.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8146131634712219
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240520_191436.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.773894727230072
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240521_145911.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8817375302314758
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240521_163347.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8838123083114624
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240604_183808.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7348489165306091
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240605_170034.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8465195894241333
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240620_100953.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8882784843444824
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240703_151259.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.5724125504493713
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240905_142905.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7295297384262085
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240905_154256.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8390692472457886
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240905_181623.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8244031071662903
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_20240905_182147.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9160075783729553
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_34fe.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8282040953636169
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_bg.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8686726093292236
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_bgvvdf.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8803561925888062
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_brgvfvf.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8593553304672241
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_ccdaza.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7328503131866455
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_cdcd.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8282443284988403
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_dfv.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8156217932701111
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_dsa.jpg",
+    "n_gt": 1,
+    "n_pred": 2,
+    "precision": 0.4999999975,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.875271737575531
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_e.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8693665266036987
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_evfd.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6382356882095337
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_hnhn.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8393034934997559
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_i.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7613359689712524
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_iiii.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8168193101882935
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_oo.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6660138964653015
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_q.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.9336347579956055
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_qssf.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7646917700767517
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_r.jpg",
+    "n_gt": 1,
+    "n_pred": 3,
+    "precision": 0.3333333322222222,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6410638689994812
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_rtgwwrrw.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.8386806845664978
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_sfd.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.785853385925293
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_u.jpg",
+    "n_gt": 1,
+    "n_pred": 1,
+    "precision": 0.9999999900000002,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.6855666041374207
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_yt.jpg",
+    "n_gt": 1,
+    "n_pred": 4,
+    "precision": 0.249999999375,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.7033840417861938
+  },
+  {
+    "image": "1077194_pellet dataset 2025-09-22 16-50-47_yty.jpg",
+    "n_gt": 1,
+    "n_pred": 4,
+    "precision": 0.249999999375,
+    "recall": 0.9999999900000002,
+    "mean_iou": 0.728049635887146
+  }
+]

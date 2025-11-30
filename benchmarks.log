@@ -1,0 +1,72 @@
+
+Benchmarks complete for yolov8n-cls.pt on C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\dataC at imgsz=224 (268.09s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++-------------------------------------------------------------------------------------------------------------+
+|      Format                  Status❔   Size (MB)   metrics/accuracy_top1   Inference time (ms/im)   FPS    |
++=============================================================================================================+
+| 1    PyTorch                 ✅         2.8         0.9868                  4.17                     239.96 |
+| 2    TorchScript             ✅         5.6         0.9868                  2.8                      356.84 |
+| 3    ONNX                    ✅         5.5         0.9868                  2.76                     361.93 |
+| 4    OpenVINO                ❌         0.0         -                       -                        -      |
+| 5    TensorRT                ❌         0.0         -                       -                        -      |
+| 6    CoreML                  ❌         0.0         -                       -                        -      |
+| 7    TensorFlow SavedModel   ❌         0.0         -                       -                        -      |
+| 8    TensorFlow GraphDef     ❌         0.0         -                       -                        -      |
+| 9    TensorFlow Lite         ❌         0.0         -                       -                        -      |
+| 10   TensorFlow Edge TPU     ❌         0.0         -                       -                        -      |
+| 11   TensorFlow.js           ❌         0.0         -                       -                        -      |
+| 12   PaddlePaddle            ❌         0.0         -                       -                        -      |
+| 13   MNN                     ✅         5.5         0.9868                  2.36                     423.46 |
+| 14   NCNN                    ✅         5.5         0.9868                  3.66                     273.02 |
+| 15   IMX                     ❌         0.0         -                       -                        -      |
+| 16   RKNN                    ❌         0.0         -                       -                        -      |
+| 17   ExecuTorch              ❌         0.0         -                       -                        -      |
++-------------------------------------------------------------------------------------------------------------+
+
+Benchmarks complete for yolov8n.pt on C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\dataD\data.yaml at imgsz=224 (127.74s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++-----------------------------------------------------------------------------------------------------------+
+|      Format                  Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS    |
++===========================================================================================================+
+| 1    PyTorch                 ✅         5.9         0.8936                8.38                     119.35 |
+| 2    TorchScript             ✅         11.8        0.8758                5.29                     188.9  |
+| 3    ONNX                    ✅         11.6        0.8758                6.11                     163.64 |
+| 4    OpenVINO                ❌         0.0         -                     -                        -      |
+| 5    TensorRT                ❌         0.0         -                     -                        -      |
+| 6    CoreML                  ❌         0.0         -                     -                        -      |
+| 7    TensorFlow SavedModel   ❌         0.0         -                     -                        -      |
+| 8    TensorFlow GraphDef     ❌         0.0         -                     -                        -      |
+| 9    TensorFlow Lite         ❌         0.0         -                     -                        -      |
+| 10   TensorFlow Edge TPU     ❌         0.0         -                     -                        -      |
+| 11   TensorFlow.js           ❌         0.0         -                     -                        -      |
+| 12   PaddlePaddle            ❌         0.0         -                     -                        -      |
+| 13   MNN                     ✅         11.5        0.875                 6.7                      149.25 |
+| 14   NCNN                    ✅         11.5        0.8757                7.97                     125.4  |
+| 15   IMX                     ❌         0.0         -                     -                        -      |
+| 16   RKNN                    ❌         0.0         -                     -                        -      |
+| 17   ExecuTorch              ❌         0.0         -                     -                        -      |
++-----------------------------------------------------------------------------------------------------------+
+
+Benchmarks complete for yolov8n.pt on C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\dataD\data.yaml at imgsz=224 (117.75s)
+Benchmarks legend:  - ✅ Success  - ❎ Export passed but validation failed  - ❌️ Export failed
++-----------------------------------------------------------------------------------------------------------+
+|      Format                  Status❔   Size (MB)   metrics/mAP50-95(B)   Inference time (ms/im)   FPS    |
++===========================================================================================================+
+| 1    PyTorch                 ✅         5.9         0.8936                8.04                     124.34 |
+| 2    TorchScript             ✅         11.8        0.8758                5.26                     190.1  |
+| 3    ONNX                    ✅         11.6        0.8758                4.89                     204.41 |
+| 4    OpenVINO                ❌         0.0         -                     -                        -      |
+| 5    TensorRT                ❌         0.0         -                     -                        -      |
+| 6    CoreML                  ❌         0.0         -                     -                        -      |
+| 7    TensorFlow SavedModel   ❌         0.0         -                     -                        -      |
+| 8    TensorFlow GraphDef     ❌         0.0         -                     -                        -      |
+| 9    TensorFlow Lite         ❌         0.0         -                     -                        -      |
+| 10   TensorFlow Edge TPU     ❌         0.0         -                     -                        -      |
+| 11   TensorFlow.js           ❌         0.0         -                     -                        -      |
+| 12   PaddlePaddle            ❌         0.0         -                     -                        -      |
+| 13   MNN                     ✅         11.5        0.875                 7.45                     134.28 |
+| 14   NCNN                    ✅         11.5        0.8757                7.27                     137.51 |
+| 15   IMX                     ❌         0.0         -                     -                        -      |
+| 16   RKNN                    ❌         0.0         -                     -                        -      |
+| 17   ExecuTorch              ❌         0.0         -                     -                        -      |
++-----------------------------------------------------------------------------------------------------------+

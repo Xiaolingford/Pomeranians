@@ -86,28 +86,34 @@ def run_classification(args):
 
 # --- Detection Workflow ---
 def run_detection(args):
-    in_root = Path(args.input)
-    out_root = Path(args.outdir)
-    ensure_dir(out_root)
+ # Point directly to the train subfolders
+    images_root = Path(args.images) / "images" / "train"
+    labels_root = Path(args.labels) / "labels" / "train"
+    out_images_root = Path(args.outdir) / "images" / "train"
+    out_labels_root = Path(args.outdir) / "labels" / "train"
 
-    imgs = [p for p in in_root.glob("*") if p.suffix.lower() in IMG_EXTS]
+    ensure_dir(out_images_root)
+    ensure_dir(out_labels_root)
+
+    imgs = [p for p in images_root.glob("*") if p.suffix.lower() in IMG_EXTS]
     if not imgs:
-        print(f"[ERROR] No images found in {in_root}")
+        print(f"[ERROR] No images found in {images_root}")
         return
 
     # Mirror originals first
     for p in imgs:
-        dst = out_root / p.name
-        ensure_dir(out_root)
+        dst_img = out_images_root / p.name
+        ensure_dir(out_images_root)
         img = cv2.imread(str(p))
         if img is None:
             print(f"[WARN] skip unreadable: {p}")
             continue
-        cv2.imwrite(str(dst), img)
-        # copy label too
-        lbl_in = p.with_suffix(".txt")
+        cv2.imwrite(str(dst_img), img)
+
+        # Copy label
+        lbl_in = labels_root / p.with_suffix(".txt").name
         if lbl_in.exists():
-            lbl_out = out_root / lbl_in.name
+            lbl_out = out_labels_root / lbl_in.name
             lbl_out.write_text(lbl_in.read_text())
 
     cur = len(imgs)
@@ -123,6 +129,7 @@ def run_detection(args):
         if per_src_counts[p] >= args.max_per_src:
             idx += 1
             continue
+
         try:
             img = imread(p)
         except Exception as e:
@@ -130,13 +137,13 @@ def run_detection(args):
             idx += 1
             continue
 
-        label_file = p.with_suffix(".txt")
+        label_file = labels_root / p.with_suffix(".txt").name
         if not label_file.exists():
             print(f"[WARN] missing label for {p}, skipping")
             idx += 1
             continue
 
-        # ✅ parse YOLO labels into floats
+        # parse YOLO labels into floats
         with open(label_file, "r") as f:
             lines = f.readlines()
         bboxes = []
@@ -146,21 +153,20 @@ def run_detection(args):
                 cls, xc, yc, bw, bh = parts
                 bboxes.append((int(cls), float(xc), float(yc), float(bw), float(bh)))
 
-        # ✅ call augment function
+        # augment image + bboxes
         aug_img, aug_bboxes = augment_image_and_bboxes(img, bboxes, use_clahe=args.use_clahe)
-
-        if aug_img is None or not aug_bboxes:  # skip invalid/empty
+        if aug_img is None or not aug_bboxes:
             idx += 1
             continue
 
-        # ✅ convert back to YOLO lines
+        # convert back to YOLO lines
         aug_lines = [f"{cls} {xc:.6f} {yc:.6f} {bw:.6f} {bh:.6f}\n"
                      for cls, xc, yc, bw, bh in aug_bboxes]
 
         stem, ext = p.stem, p.suffix
         out_name = f"{stem}_aug{per_src_counts[p]+1:03d}{ext}"
-        cv2.imwrite(str(out_root / out_name), aug_img)
-        with open(out_root / f"{stem}_aug{per_src_counts[p]+1:03d}.txt", "w") as f:
+        cv2.imwrite(str(out_images_root / out_name), aug_img)
+        with open(out_labels_root / f"{stem}_aug{per_src_counts[p]+1:03d}.txt", "w") as f:
             f.writelines(aug_lines)
 
         per_src_counts[p] += 1
@@ -169,7 +175,7 @@ def run_detection(args):
         if cur % 50 == 0:
             print(f"  → {cur}/{args.target}")
 
-    print(f"[DONE] Detection: {cur} images in {out_root}")
+    print(f"[DONE] Detection: {cur} images in {out_images_root}")
 
 
 # --- Main Entrypoint ---
@@ -177,20 +183,27 @@ def main():
     ap = argparse.ArgumentParser(description="Unified tool to balance datasets with augmentation.")
     ap.add_argument("--task", required=True, choices=["classification", "detection"],
                     help="Which type of dataset to balance.")
-    ap.add_argument("--input", required=True, help="Input dataset root.")
+    ap.add_argument("--input", help="Input dataset root (required for classification).")
     ap.add_argument("--outdir", required=True, help="Output root (augmented copy).")
     ap.add_argument("--class", dest="cls", help="For classification: class to augment (algae/microplastics).")
     ap.add_argument("--target", type=int, required=True, help="Desired total images.")
     ap.add_argument("--max_per_src", type=int, default=20, help="Max augmented copies per source image.")
     ap.add_argument("--use_clahe", action="store_true", help="Apply CLAHE randomly in augmentation")
+    ap.add_argument("--images", help="Root folder of images (for detection).")
+    ap.add_argument("--labels", help="Root folder of labels (for detection).")
+
+
     args = ap.parse_args()
 
     if args.task == "classification":
-        if not args.cls:
-            ap.error("--class is required for classification task")
+        if not args.cls or not args.input:
+            ap.error("--class and --input are required for classification task")
         run_classification(args)
     elif args.task == "detection":
+        if not args.images or not args.labels:
+            ap.error("--images and --labels are required for detection task")
         run_detection(args)
+
 
 
 if __name__ == "__main__":

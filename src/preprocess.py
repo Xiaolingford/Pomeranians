@@ -176,8 +176,9 @@ def main():
 
     elif args.task == "detection":
         # Check if YOLO-style subfolders exist
-        img_in = in_dir / "images"
-        lbl_in = in_dir / "labels"
+        img_in = in_dir / "images" / "train"
+        lbl_in = in_dir / "labels" / "train"
+
 
         if img_in.exists() and lbl_in.exists():
             # Standard YOLO structure

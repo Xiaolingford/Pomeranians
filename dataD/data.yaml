@@ -1,0 +1,6 @@
+train: C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\dataD\images\train
+val: C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\dataD\images\val
+test: C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\data_yolo\images\test
+
+nc: 2
+names: ["algae", "microplastics"]

@@ -7,6 +7,9 @@ import torchvision
 from torchvision.ops import box_iou, generalized_box_iou
 
 
+CONF_THRESH = 0.45
+NMS_IOU = 0.45
+
 # -----------------------------
 # IoU + GIoU
 # -----------------------------
@@ -52,92 +55,121 @@ def giou_loss(pred_boxes, target_boxes, reduction='mean'):
 
 
 # -----------------------------
-# Detection Loss (GIoU + CE)
+# Detection Loss (ORIGINAL 74% SETTINGS)
 # -----------------------------
 class DetectionLoss(nn.Module):
-    def __init__(self, lambda_box=1.0, lambda_cls=1.0, iou_threshold=0.5):
+    def __init__(self, lambda_box=5.0, lambda_cls=1.0, lambda_obj=0.25,
+                 pos_iou_thresh=0.4, neg_iou_thresh=0.2):
         super().__init__()
         self.lambda_box = lambda_box
         self.lambda_cls = lambda_cls
-        self.iou_threshold = iou_threshold
+        self.lambda_obj = lambda_obj
+        self.pos_iou_thresh = pos_iou_thresh
+        self.neg_iou_thresh = neg_iou_thresh
+        self.ce = nn.CrossEntropyLoss(reduction='mean')
+        self.bce = nn.BCEWithLogitsLoss(reduction='mean')
 
-    def forward(self, pred_boxes, pred_logits, targets):
+    def forward(self, pred_boxes, pred_logits, pred_obj, targets):
         device = pred_boxes.device
-        total_box_loss, total_cls_loss = 0.0, 0.0
-        num_valid = 0
+        total_obj_loss = 0.0
+        total_cls_loss = 0.0
+        total_box_loss = 0.0
+        n_images = len(targets)
 
-        for i, tgt in enumerate(targets):
-            if len(tgt["boxes"]) == 0:
+        for i in range(n_images):
+            pb, pl, po = pred_boxes[i], pred_logits[i], pred_obj[i]
+            tgt = targets[i]
+            gt_boxes = tgt.get("boxes", torch.empty((0,4), device=device))
+            gt_labels = tgt.get("labels", torch.empty((0,), dtype=torch.long, device=device))
+
+            N = pb.size(0)
+            obj_target = torch.zeros((N,), device=device)
+            cls_loss = 0.0
+            box_loss = 0.0
+
+            if gt_boxes.numel() == 0:
+                total_obj_loss += self.bce(po, obj_target)
                 continue
-
-            gt_boxes = tgt["boxes"].to(device)
-            gt_labels = tgt["labels"].to(device)
-            pb = pred_boxes[i]
-            pl = pred_logits[i]
 
             ious = box_iou(pb, gt_boxes)
-            matched_pred_idx = ious.argmax(dim=0)  # best pred per GT
-            matched_gt_idx = torch.arange(len(gt_boxes), device=device)
+            best_iou, best_gt = ious.max(dim=1)
+            pos_mask = best_iou > self.pos_iou_thresh
+            neg_mask = best_iou < self.neg_iou_thresh
 
-            if len(matched_pred_idx) == 0:
-                continue
+            obj_target[pos_mask] = 1.0
 
-            matched_preds = pb[matched_pred_idx]
-            matched_logits = pl[matched_pred_idx]
-            matched_gt_boxes = gt_boxes[matched_gt_idx]
-            matched_gt_labels = gt_labels[matched_gt_idx]
+            # Objectness loss (weighted)
+            pos_weight = torch.tensor(3.0, device=device)
+            bce = nn.BCEWithLogitsLoss(pos_weight=pos_weight)
+            total_obj_loss += bce(po, obj_target)
 
-            iou_weights = ious[matched_pred_idx, matched_gt_idx].detach()
-            iou_weights = iou_weights / (iou_weights.sum() + 1e-6)
+            if pos_mask.any():
+                pos_idx = pos_mask.nonzero(as_tuple=True)[0]
+                matched_gt_boxes = gt_boxes[best_gt[pos_idx]]
+                matched_gt_labels = gt_labels[best_gt[pos_idx]]
 
-            box_loss = (giou_loss(matched_preds, matched_gt_boxes, reduction='none') * iou_weights).sum()
-            cls_loss = (F.cross_entropy(matched_logits, matched_gt_labels, reduction='none') * iou_weights).sum()
+                # Box loss
+                total_box_loss += giou_loss(pb[pos_idx], matched_gt_boxes, reduction='mean')
 
-            total_box_loss += box_loss
-            total_cls_loss += cls_loss
-            num_valid += 1
+                # Classification
+                total_cls_loss += self.ce(pl[pos_idx], matched_gt_labels)
 
-        if num_valid == 0:
-            return torch.tensor(0.0, device=device, requires_grad=True)
+        total_loss = (
+            self.lambda_box * total_box_loss +
+            self.lambda_obj * total_obj_loss +
+            self.lambda_cls * total_cls_loss
+        ) / max(1, n_images)
 
-        loss = (self.lambda_box * total_box_loss + self.lambda_cls * total_cls_loss) / max(num_valid, 1)
-        return torch.nan_to_num(loss)
-
+        return torch.nan_to_num(total_loss)
 
 
 # -----------------------------
 # NMS + Postprocessing
 # -----------------------------
 @torch.no_grad()
-def postprocess_detections(pred_boxes, pred_logits, conf_thresh=0.25, iou_thresh=0.45, img_size=224):
-    probs = F.softmax(pred_logits, dim=-1)
-    confs, labels = probs.max(dim=-1)
+def postprocess_detections(pred_boxes, pred_logits, pred_obj,
+                           conf_thresh=CONF_THRESH, iou_thresh=0.45, img_size=224):
+    """
+    pred_boxes: (N,4), pred_logits: (N,num_classes), pred_obj: (N,)
+    returns: Tensor [K, 6] -> x1,y1,x2,y2,conf,label
+    """
+    # objectness -> prob
+    obj_probs = torch.sigmoid(pred_obj)  # [N]
 
-    mask = confs > conf_thresh
-    boxes = pred_boxes[mask]
-    confs = confs[mask]
-    labels = labels[mask]
+    # class probs (per-class) but multiply by objectness to get final score
+    class_probs = F.softmax(pred_logits, dim=-1)  # [N, C]
+    scores, labels = class_probs.max(dim=-1)      # per-pred best class score
+    final_scores = scores * obj_probs
 
-    if boxes.numel() == 0:
+    keep_mask = final_scores > conf_thresh
+    if keep_mask.sum() == 0:
         return torch.empty((0, 6), device=pred_boxes.device)
 
-    # Scale to image coordinates
-    boxes = boxes.clamp(0, 1) * img_size
+    boxes = pred_boxes[keep_mask].clamp(0, 1) * img_size
+    scores = final_scores[keep_mask]
+    labels = labels[keep_mask]
 
-    # 🔹 Class-wise NMS (lightweight version)
-    keep = []
+    # class-wise NMS
+    kept_indices = []
     for c in labels.unique():
-        mask_c = labels == c
-        keep_c = torchvision.ops.nms(boxes[mask_c], confs[mask_c], iou_thresh)
-        keep.append(torch.nonzero(mask_c)[keep_c])
-    keep = torch.cat(keep).squeeze(1)
+        idxs = torch.nonzero(labels == c).squeeze(1)
+        if len(idxs) == 0:
+            continue
+        c_boxes = boxes[idxs]
+        c_scores = scores[idxs]
+        keep = torchvision.ops.nms(c_boxes, c_scores, iou_thresh)
+        kept_indices.append(idxs[keep])
 
-    boxes, confs, labels = boxes[keep], confs[keep], labels[keep]
-    return torch.cat([boxes, confs.unsqueeze(1), labels.unsqueeze(1).float()], dim=1)
+    if len(kept_indices) == 0:
+        return torch.empty((0, 6), device=pred_boxes.device)
+
+    kept_indices = torch.cat(kept_indices, dim=0)
+    boxes, scores, labels = boxes[kept_indices], scores[kept_indices], labels[kept_indices]
+    return torch.cat([boxes, scores.unsqueeze(1), labels.unsqueeze(1).float()], dim=1)
 
 
 # -----------------------------
-# Detection Head
+# Detection Head (ORIGINAL SIMPLE VERSION)
 # -----------------------------
 class DetectionHead(nn.Module):
     def __init__(self, in_channels, num_classes, num_preds=100):
@@ -149,18 +181,40 @@ class DetectionHead(nn.Module):
             nn.BatchNorm2d(in_channels),
             nn.ReLU(inplace=True)
         )
+        # Simple 1-layer heads (ORIGINAL)
         self.box_pred = nn.Linear(in_channels, 4)
         self.cls_pred = nn.Linear(in_channels, num_classes)
+        self.obj_pred = nn.Linear(in_channels, 1)
 
     def forward(self, feat):
         feat = self.neck(feat)
         B, C, H, W = feat.shape
         x = feat.view(B, C, -1).permute(0, 2, 1)  # [B, N, C]
+
+        # Limit to num_preds for stability
         if x.size(1) > self.num_preds:
             x = x[:, :self.num_preds, :]
-        pred_boxes = torch.sigmoid(self.box_pred(x)).clamp(0, 1)
-        pred_logits = self.cls_pred(x)
-        return pred_boxes, pred_logits
+
+        # Separate prediction branches
+        pred_boxes_raw = self.box_pred(x)          # (B, N, 4)
+        pred_logits = self.cls_pred(x)             # (B, N, num_classes)
+        pred_obj = self.obj_pred(x).squeeze(-1)    # (B, N)
+
+        # Normalize box coordinates (0..1)
+        pred_boxes_raw = torch.sigmoid(pred_boxes_raw)
+
+        cx = pred_boxes_raw[..., 0]
+        cy = pred_boxes_raw[..., 1]
+        w  = pred_boxes_raw[..., 2]
+        h  = pred_boxes_raw[..., 3]
+
+        x1 = (cx - 0.5 * w).clamp(0.0, 1.0)
+        y1 = (cy - 0.5 * h).clamp(0.0, 1.0)
+        x2 = (cx + 0.5 * w).clamp(0.0, 1.0)
+        y2 = (cy + 0.5 * h).clamp(0.0, 1.0)
+
+        pred_boxes = torch.stack([x1, y1, x2, y2], dim=-1)
+        return pred_boxes, pred_logits, pred_obj
 
 
 # -----------------------------
@@ -195,6 +249,11 @@ class DualBranchSwinCNNDetector(nn.Module):
                 nn.Linear(256, num_classes)
             )
         elif task == "detection":
+            self.fusion_conv = nn.Sequential(
+                nn.Conv2d(s.shape[1] + c.shape[1], s.shape[1], 1),
+                nn.BatchNorm2d(s.shape[1]),
+                nn.ReLU(inplace=True)
+            )
             self.det_head = DetectionHead(in_channels=s.shape[1], num_classes=num_classes)
         else:
             raise ValueError("task must be 'classification' or 'detection'")
@@ -212,18 +271,39 @@ class DualBranchSwinCNNDetector(nn.Module):
             s = self.pool(self._swin_feats(x)).flatten(1)
             return self.head(torch.cat([c, s], dim=1))
         elif self.task == "detection":
+            # CNN branch (get spatial features)
+            c = self.cnn.conv1(x)
+            c = self.cnn.bn1(c)
+            c = self.cnn.relu(c)
+            c = self.cnn.layer1(c)
+            c = self.cnn.layer2(c)
+            c = self.cnn.layer3(c)
+            c = self.cnn.layer4(c)
+
+            # Swin branch (patch-based features)
             s = self._swin_feats(x)
-            return self.det_head(s)
+
+            # Match feature dims
+            if c.shape[-2:] != s.shape[-2:]:
+                s = F.adaptive_avg_pool2d(s, output_size=c.shape[-2:])
+
+            # Fuse both features
+            fused = torch.cat([c, s], dim=1)
+            fused = self.fusion_conv(fused)
+
+            # Detection head
+            pred_boxes, pred_logits, pred_obj = self.det_head(fused)
+            return pred_boxes, pred_logits, pred_obj
 
     @torch.no_grad()
     def predict(self, x, conf_thresh=0.25, iou_thresh=0.45):
         self.eval()
-        pred_boxes, pred_logits = self.forward(x)
+        pred_boxes, pred_logits, pred_obj = self.forward(x)
+
         results = []
         for b in range(x.size(0)):
-            dets = postprocess_detections(pred_boxes[b], pred_logits[b],
-                                          conf_thresh=conf_thresh,
-                                          iou_thresh=iou_thresh)
+            dets = postprocess_detections(pred_boxes[b], pred_logits[b], pred_obj[b],
+                              conf_thresh=conf_thresh, iou_thresh=iou_thresh)
             results.append(dets.cpu())
         return results
 
@@ -234,7 +314,7 @@ class DualBranchSwinCNNDetector(nn.Module):
 if __name__ == "__main__":
     det_model = DualBranchSwinCNNDetector(num_classes=2, task="detection")
     x = torch.randn(2, 3, 224, 224)
-    boxes, logits = det_model(x)
+    boxes, logits, obj = det_model(x)
 
     targets = [
         {"boxes": torch.tensor([[0.1, 0.1, 0.3, 0.3], [0.5, 0.5, 0.8, 0.8]]), "labels": torch.tensor([0, 1])},
@@ -242,5 +322,6 @@ if __name__ == "__main__":
     ]
 
     criterion = DetectionLoss()
-    loss = criterion(boxes, logits, targets)
+    loss = criterion(boxes, logits, obj, targets)
+
     print("Detection loss:", loss.item())

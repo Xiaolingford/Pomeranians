@@ -1,0 +1,51 @@
+{
+  "accuracy": 0.9517543859649122,
+  "precision_per_class": [
+    1.0,
+    0.9385474860335196
+  ],
+  "recall_per_class": [
+    0.8166666666666667,
+    1.0
+  ],
+  "f1_per_class": [
+    0.8990825688073395,
+    0.968299711815562
+  ],
+  "support_per_class": [
+    60,
+    168
+  ],
+  "classification_report": {
+    "algae": {
+      "precision": 1.0,
+      "recall": 0.8166666666666667,
+      "f1-score": 0.8990825688073395,
+      "support": 60.0
+    },
+    "microplastics": {
+      "precision": 0.9385474860335196,
+      "recall": 1.0,
+      "f1-score": 0.968299711815562,
+      "support": 168.0
+    },
+    "accuracy": 0.9517543859649122,
+    "macro avg": {
+      "precision": 0.9692737430167597,
+      "recall": 0.9083333333333333,
+      "f1-score": 0.9336911403114507,
+      "support": 228.0
+    },
+    "weighted avg": {
+      "precision": 0.9547192002352249,
+      "recall": 0.9517543859649122,
+      "f1-score": 0.9500846741818193,
+      "support": 228.0
+    }
+  },
+  "efficiency": {
+    "params_million": 38.83,
+    "flops_giga": 6.33,
+    "inference_time_ms_per_image": 21.23
+  }
+}
