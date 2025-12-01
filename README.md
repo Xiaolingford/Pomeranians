@@ -162,7 +162,7 @@ python src\detect.py --weights classifier.pth --source .\data\microplastics\1.jp
     #Yolov8n analyze metrics of py w P R f1 type stuff for classification USE THIS instead opf classify its for yolov8n!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     python src/analyze_metrics.py
 
-    #Yolov8n analyze metrics of py w P R f1 type stuff for detection USE THIS instead opf detection its for yolov8n !!!!!!!!!!!!!!!!!!!!!! 
+    #Yolov8n analyze metrics of py w P R f1 type stuff for detection USE THIS instead opf detection its for yolov8n !!!!!!!!!!!!!!!!!!!!!!
     python src/analyze_metrics_detection.py
 
     #Yolov8n analyze metrics of classification model with visualization same as ours
@@ -179,8 +179,9 @@ python src\detect.py --weights classifier.pth --source .\data\microplastics\1.jp
 
     #autosplit to test if i properly split the set,
     python src/split_Classify.py
+
+    #for metrics
+    python src/resnet18_metrics.py
     ```
 
-python src/yolov8_metrics.py --data ./dataC/val --weights best.pt --out ./yolo_class_val
-
-python src/yolov8_metrics.py --data ./dataC/val --weights "C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\runs\classify\yolov8n_classification_microplastics_algae14\weights\best.pt" --out ../yolov8n_classification_valresults(test)
+r"C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\dataC\val" resnet18_best.pth

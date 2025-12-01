@@ -1,0 +1,61 @@
+{
+  "accuracy": 0.956140350877193,
+  "precision_per_class": [
+    0.9629629629629629,
+    0.9540229885057471
+  ],
+  "recall_per_class": [
+    0.8666666666666667,
+    0.9880952380952381
+  ],
+  "f1_per_class": [
+    0.9122807017543859,
+    0.9707602339181286
+  ],
+  "support_per_class": [
+    30.0,
+    84.0
+  ],
+  "classification_report": {
+    "algae": {
+      "precision": 0.9629629629629629,
+      "recall": 0.8666666666666667,
+      "f1-score": 0.9122807017543859,
+      "support": 30.0
+    },
+    "microplastics": {
+      "precision": 0.9540229885057471,
+      "recall": 0.9880952380952381,
+      "f1-score": 0.9707602339181286,
+      "support": 84.0
+    },
+    "accuracy": 0.956140350877193,
+    "macro avg": {
+      "precision": 0.958492975734355,
+      "recall": 0.9273809523809524,
+      "f1-score": 0.9415204678362572,
+      "support": 114.0
+    },
+    "weighted avg": {
+      "precision": 0.9563756133629091,
+      "recall": 0.956140350877193,
+      "f1-score": 0.9553708833487227,
+      "support": 114.0
+    }
+  },
+  "efficiency": {
+    "params_million": 11.177538,
+    "flops_giga": 1.814,
+    "inference_time_ms_per_image": 3.0127429962158203
+  },
+  "confusion_matrix": [
+    [
+      26,
+      4
+    ],
+    [
+      1,
+      83
+    ]
+  ]
+}
