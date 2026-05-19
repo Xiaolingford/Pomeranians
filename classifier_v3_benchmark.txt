@@ -1,0 +1,13 @@
+LDBST-MP Benchmark Results
+==================================================
+
+Task: classification
+Model: classifier_v3.pth
+Parameters: 571,586 (0.57M)
+Model Size: 2.21 MB
+
+GPU: NVIDIA GeForce RTX 3060
+  Inference Time: 4.70 ± 0.63 ms
+  FPS: 212.8
+  Peak VRAM: 24.67 MB
+

@@ -1,0 +1,13 @@
+LDBST-MP Benchmark Results
+==================================================
+
+Task: detection
+Model: detector_v4.pth
+Parameters: 541,063 (0.54M)
+Model Size: 2.10 MB
+
+GPU: NVIDIA GeForce RTX 3060
+  Inference Time: 4.66 ± 0.28 ms
+  FPS: 214.6
+  Peak VRAM: 24.71 MB
+

@@ -1,0 +1,37 @@
+============================================================
+TEST SET RESULTS (conf_thresh=0.5)
+============================================================
+
+Metric                    Value
+--------------------------------
+Precision                0.9231
+Recall                   0.9076
+F1 Score                 0.9153
+mAP@0.5                  0.8872
+Avg IoU                  0.7727
+
+Detection Counts
+--------------------------------
+True Positives              108
+False Positives               9
+False Negatives              11
+Total GT                    119
+
+============================================================
+SUMMARY FOR YOUR PAPER
+============================================================
+
+Model: LDBST-MP (Detection)
+Test Set Size: 114 images
+Confidence Threshold: 0.5
+
+Results:
+  Precision:  92.31%
+  Recall:     90.76%
+  F1 Score:   0.9153
+  mAP@0.5:    88.72%
+  Avg IoU:    0.7727
+
+Objective Check:
+  mAP@0.5 > 90%:  ❌ 88.72%
+  F1 > 0.90:      ✅ PASS

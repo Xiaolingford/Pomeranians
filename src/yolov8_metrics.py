@@ -35,6 +35,7 @@ def generate_cam(model, image_tensor, class_idx=None):
     feature_maps, gradients = {}, {}
 
     def forward_hook(module, inp, out):
+        
         feature_maps["value"] = out.detach()
 
     def backward_hook(module, grad_in, grad_out):

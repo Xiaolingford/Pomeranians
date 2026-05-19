@@ -1,0 +1,5 @@
+Model: yolov8n
+Parameters: 3,011,238 (3.01M)
+Model Size: 17.57 MB
+FPS: 98.7
+VRAM: 14.56 MB

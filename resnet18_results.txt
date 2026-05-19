@@ -1,0 +1,10 @@
+Model: resnet18
+Parameters: 11,177,538 (11.18M)
+Accuracy: 0.9912
+Macro F1: 0.9885
+FPS: 98.6
+VRAM: 114.04 MB
+
+Per-class:
+  algae: P=0.9667, R=1.0000, F1=0.9831
+  microplastics: P=1.0000, R=0.9881, F1=0.9940

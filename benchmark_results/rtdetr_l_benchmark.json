@@ -1,0 +1,22 @@
+{
+  "model": "RT-DETR-L",
+  "weights": "runs/detect/rtdetr_l_microplastic/weights/best.pt",
+  "params_total": 32810186,
+  "params_million": 32.81,
+  "model_size_mb": 63.09,
+  "inference_ms_mean": 34.32,
+  "inference_ms_std": 4.55,
+  "fps": 29.1,
+  "peak_vram_mb": 182.0,
+  "img_size": 224,
+  "n_warmup": 50,
+  "n_runs": 500,
+  "device": "cuda",
+  "precision": 0.9709,
+  "recall": 0.9719,
+  "f1": 0.9714,
+  "map50": 0.9787,
+  "map50_95": 0.9509,
+  "conf_thresh": 0.5,
+  "iou_thresh": 0.45
+}

@@ -182,6 +182,131 @@ python src\detect.py --weights classifier.pth --source .\data\microplastics\1.jp
 
     #for metrics
     python src/resnet18_metrics.py
+
+
+
+    #Revamped Preprocessing with online augmentation to fight against Overfitting, OVERFITTING DIEEE!!! for detection
+    # Step 1: Analyze original data
+    python src/balance_detection.py --input ./data_yolo --split train --analyze-only
+
+    # Step 2: Balance training set
+    python src/balance.py --task detection --input ./data_yolo --output ./data_yolo_balanced --split train --target 1500
+
+    # Step 3: Light preprocess training set
+    python src/preprocess_light.py --task detection --input ./data_yolo_balanced --output ./data_yolo_train_ready --size 224
+
+    # Step 4: Train
+    python src/train2.py --task detection --train_dir ./data_yolo_train_ready --val_dir ./data_yolo --num_classes 2 --epochs 50 --batch_size 8 --lr 1e-4 --fresh_start --output_model detector_v2.pth
+
+    #Step 4: Train ( This w 100 epochs to try to increase accuracy) v3
+    python src/train2.py --task detection --train_dir ./data_yolo_train_ready --val_dir ./data_yolo --num_classes 2 --epochs 100 --batch_size 8 --lr 1e-4 --fresh_start --output_model detector_v3.pth
+
+    #Step 4: Train ( This w 150 epochs to try to increase accuracy) v4
+    python src/train2.py --task detection --train_dir ./data_yolo_train_ready --val_dir ./data_yolo --num_classes 2 --epochs 150 --batch_size 8 --lr 1e-4 --fresh_start --output_model detector_v4.pth
+
+#For detection test set v4
+python src/evaluate.py --task detection --model detector_v4.pth --test_dir ./data_yolo_test_ready --num_classes 2 --conf_thresh 0.5
+#For detection test set v2
+python src/preprocess_light.py --task detection --input ./data_yolo/images/test --output ./data_yolo_test_ready/images --size 224
+
+    python src/evaluate.py --task detection --model detector_v2.pth --test_dir ./data_yolo_test_ready --num_classes 2 --conf_thresh 0.5 #with conf thres 0.5
+
+    #Revamped Preprocessing with online augmentation to fight against Overfitting, OVERFITTING DIEEE!!! for classification
+    # Step 1: Analyze
+    python src/balance.py --task classification --input ./data --analyze-only
+
+    # Step 2: Balance training set (increase both classes to ~1500 each)
+    python src/balance.py --task classification --input ./data/train --output ./data_train_balanced_classification --target 1500 --class algae
+    python src/balance.py --task classification --input ./data_train_balanced_classification --output ./data_train_balanced_final --target 1500 --class microplastics
+
+# Step 3: Light preprocess TRAINING
+
+    # Preprocess training data
+    python src/preprocess_light.py --task classification --input ./data_train_balanced_final --output ./data_train_ready --size 224
+
+    # Preprocess validation data
+    python src/preprocess_light.py --task classification --input ./data/val --output ./data_val_ready --size 224
+
+
+    # Step 3b: Light preprocess VALIDATION
+    python src/preprocess_light.py --task classification --input ./data/val --output ./data_val_ready --size 224
+
+    # Step 4: Train for classification
+    python src/train2.py --task classification --train_dir ./data_train_ready --val_dir ./data_val_ready --num_classes 2 --epochs 50 --batch_size 16 --lr 5e-5 --fresh_start --output_model classifier_v2.pth
+
+    #For Test Set classification
+    # Step 2: Preprocess test set
+    python src/preprocess_light.py --task classification --input ./data/test --output ./data_test_ready --size 224
+
+    # Step 3: Evaluate on test set v2
+    python src/evaluate.py --task classification --model classifier_v2.pth --test_dir ./data_test_ready --num_classes 2
+
+    #used this for training classification model v3
+    python src/train2.py --task classification --train_dir ./data_train_ready --val_dir ./data_val_ready --num_classes 2 --epochs 50 --batch_size 16 --lr 5e-5 --fresh_start --output_model classifier_v3.pth
+
+    #For Visualization our Model Classification and detection
+    python src/visualize.py --task classification --model classifier_v3.pth --test_dir ./data_test_ready --output ./visuals_classification
+
+    python src/visualize.py --task detection --model detector_v4.pth --test_dir ./data_yolo_test_ready --output ./visuals_detection --conf_thresh 0.5
+
+    #For Benchamrking our model Classification and Detection
+    python src/benchmark.py --model detector_v4.pth --task detection --num_runs 500 --warmup 50
+    python src/benchmark.py --model classifier_v3.pth --task classification --num_runs 100
+
+    #For training and evaluating classification baseline models
+    python src/baseline_models.py --model resnet18 --train_dir ./data_train_ready --val_dir ./data_val_ready --test_dir ./data_test_ready --epochs 50 --batch_size 16 --lr 1e-4
+
+    python src/baseline_models.py --model mobilenetv2 --train_dir ./data_train_ready --val_dir ./data_val_ready --test_dir ./data_test_ready --epochs 50 --batch_size 16 --lr 1e-4
+
+    python src/baseline_models.py --model efficientnet_b0 --train_dir ./data_train_ready --val_dir ./data_val_ready --test_dir ./data_test_ready --epochs 50 --batch_size 16 --lr 1e-4
+
+    #for training yolo baseline models v8 nano and v5 nano
+    python src/yolo_baseline.py --model yolov8n --data_dir ./data_yolo --epochs 100 --imgsz 224 --batch_size 16 --conf_thresh 0.5
+
+    python src/yolo_baseline.py --model yolov5n --data_dir ./data_yolo --epochs 100 --imgsz 224 --batch_size 16 --conf_thresh 0.5
+
+python src/yolo_baseline.py --model yolov8n --benchmark_only --weights runs/detect/yolov8n_microplastic4/weights/best.pt
+python src/yolo_baseline.py --model yolov5n --benchmark_only --weights runs/detect/yolov5n_microplastic2/weights/best.pt
+#for training YOLOv8s and derty for comparing against bigger model
+
+    python rtdetr_det.py --task both --data_dir ./data_yolo --epochs 100 --batch 16 --img_size 224 --conf 0.5
+
+    #This is for benchmarking, no COCO weights
+
+python src/yolo_scratch_baseline.py --model yolov8s --task both --data_dir ./data_yolo --img_size 224 --conf 0.5 --epochs 150
+python src/yolo_scratch_baseline.py --model yolov8n --task both --data_dir ./data_yolo --img_size 224 --conf 0.5 --epochs 150
+python src/yolo_scratch_baseline.py --model yolov5n --task both --data_dir ./data_yolo --img_size 224 --conf 0.5 --epochs 150
+
+python src/yolo_scratch_baseline.py --model yolov8n --task benchmark --weights runs/detect/yolov8n_scratch/weights/best.pt --data_dir ./data_yolo
+
+python src/yolo_scratch_baseline.py --model yolov8s --task benchmark --weights runs/detect/yolov8s_scratch/weights/best.pt --data_dir ./data_yolo
+
+python src/yolo_scratch_baseline.py --model yolov5n --task benchmark --weights runs/detect/yolov5n_scratch/weights/best.pt --data_dir ./data_yolo
+    #For Ablation Study
+    python src/run_ablation.py --train_dir ./data_yolo_train_ready --val_dir ./data_yolo --num_classes 2 --epochs 150 --batch_size 8 --lr 1e-4 --fresh_start --variants swin_only cnn_only no_fusion
+    #For Ablation Study if u wana check thebresults without training
+    python src/run_ablation.py --val_dir ./data_yolo --num_classes 2 --skip_train --variants swin_only cnn_only no_fusion
+
+python rtdetr_det.py --task benchmark --data_dir ./data_yolo --img_size 224 --conf 0.5 --weights runs/detect/rtdetr_l_microplastic/weights/best.pt
+
+#Last for the Sensitivity run
+python src/run_sensitivity.py --train_dir ./data_yolo_train_ready --val_dir ./data_yolo --num_classes 2 --epochs 150 --batch_size 8 --lr 1e-4 --fresh_start
+
+python src/run_sensitivity.py --train_dir ./data_yolo_train_ready --val_dir ./data_yolo --num_classes 2 --epochs 150 --batch_size 8 --lr 1e-4 --fresh_start --runs heads_2 heads_8 window_4 window_14 lambdabox_1 lambdabox_10
+
+#run this tomorrow on april 19,2026, the heads 2and 8 are finished, the other head didnt finish because it couldnt divide them evenly
+python src/run_sensitivity.py --train_dir ./data_yolo_train_ready --val_dir ./data_yolo --num_classes 2 --epochs 150 --batch_size 8 --lr 1e-4 --fresh_start --runs window_2 window_14 lambdabox_1 lambdabox_10
+
+#Rebenchmark w proper empty cache to see true vram
+python src/run_sensitivity.py --val_dir ./data_yolo --num_classes 2 --skip_train --runs heads_2 heads_8
+
+#rebenchmark ablation for proper vram 
+python src/run_ablation.py --val_dir ./data_yolo --num_classes 2 --skip_train --variants swin_only cnn_only no_fusion
+
+#for fair comparison run again
+python src/rtdetr_scratch_baseline.py --task both --data_dir ./data_yolo --epochs 150 --batch 16 --img_size 224
     ```
 
 r"C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\dataC\val" resnet18_best.pth
+
+    .\.venv\Scripts\Activate.ps1

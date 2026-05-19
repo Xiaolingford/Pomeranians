@@ -1,0 +1,229 @@
+======================================================================
+🚀 LDBST-MP Training: CLASSIFICATION (with imbalance fixes)
+======================================================================
+[config] Epochs=50, LR=5e-05, Batch=8
+[config] Weight Decay=0.01, Patience=15
+[config] Image size=224x224
+[device] Using: cuda
+======================================================================
+[mode] Training LDBST-MP CLASSIFICATION with IMBALANCE FIXES
+======================================================================
+[data] train=2100 | val=228 | workers=4 | pin_memory=True
+[data] Found 2 classes: ['algae', 'microplastics']
+
+[analysis] Checking class distribution...
+[train] Class distribution: {0: 1050, 1: 1050}
+[val]   Class distribution: {0: 60, 1: 168}
+        Class 0 (algae): train=50.0%, val=26.3%
+        Class 1 (microplastics): train=50.0%, val=73.7%
+
+[weights] Computed class weights: [1.0, 1.0]
+[sampler] Creating WeightedRandomSampler for balanced training...
+[sampler] Balanced loader created with 262 batches
+[model] LDBST-MP Parameters: 0.57M
+[loss] Using FocalLoss(gamma=2.0, label_smoothing=0.1)
+[optimizer] AdamW(lr=2.50e-05, wd=0.01)
+[scheduler] Warmup(5 epochs) + CosineAnnealing
+
+======================================================================
+Starting Training...
+======================================================================
+[Class] Epoch 1/50 (LR=2.50e-05): 100%|███████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:27<00:00,  9.46batch/s, loss=0.1196] 
+
+[epoch 01] train_loss=0.1512, val_loss=0.1298
+           Overall: acc=0.7368, P=0.6250, R=0.5321, F1=0.5052
+           algae: P=0.5000, R=0.1000, F1=0.1667, n=60
+           microplastics: P=0.7500, R=0.9643, F1=0.8438, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        6       54
+           micropla        6      162
+✅ New best model (F1=0.5052, acc=0.7368)
+[Class] Epoch 2/50 (LR=5.00e-06): 100%|███████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:24<00:00, 10.79batch/s, loss=0.1711]
+
+[epoch 02] train_loss=0.1269, val_loss=0.1331
+           Overall: acc=0.7281, P=0.5716, R=0.5155, F1=0.4768
+           algae: P=0.4000, R=0.0667, F1=0.1143, n=60
+           microplastics: P=0.7431, R=0.9643, F1=0.8394, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        4       56
+           micropla        6      162
+⏳ No improvement for 1/15 epochs (best F1=0.5052)
+[Class] Epoch 3/50 (LR=1.00e-05): 100%|███████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:24<00:00, 10.76batch/s, loss=0.1208]
+
+[epoch 03] train_loss=0.1116, val_loss=0.1304
+           Overall: acc=0.7018, P=0.4147, R=0.4815, F1=0.4262
+           algae: P=0.1000, R=0.0167, F1=0.0286, n=60
+           microplastics: P=0.7294, R=0.9464, F1=0.8238, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        1       59
+           micropla        9      159
+⏳ No improvement for 2/15 epochs (best F1=0.5052)
+[Class] Epoch 4/50 (LR=1.50e-05): 100%|███████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:24<00:00, 10.75batch/s, loss=0.0378]
+
+[epoch 04] train_loss=0.0904, val_loss=0.2323
+           Overall: acc=0.7368, P=0.6195, R=0.5054, F1=0.4400
+           algae: P=0.5000, R=0.0167, F1=0.0323, n=60
+           microplastics: P=0.7389, R=0.9940, F1=0.8477, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        1       59
+           micropla        1      167
+⏳ No improvement for 3/15 epochs (best F1=0.5052)
+[Class] Epoch 5/50 (LR=2.00e-05): 100%|███████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:24<00:00, 10.77batch/s, loss=0.0817]
+
+[epoch 05] train_loss=0.0652, val_loss=0.4792
+           Overall: acc=0.7368, P=0.3684, R=0.5000, F1=0.4242
+           algae: P=0.0000, R=0.0000, F1=0.0000, n=60
+           microplastics: P=0.7368, R=1.0000, F1=0.8485, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        0       60
+           micropla        0      168
+⏳ No improvement for 4/15 epochs (best F1=0.5052)
+[Class] Epoch 6/50 (LR=2.50e-05): 100%|███████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:24<00:00, 10.58batch/s, loss=0.2406]
+
+[epoch 06] train_loss=0.0450, val_loss=0.5556
+           Overall: acc=0.7368, P=0.3684, R=0.5000, F1=0.4242
+           algae: P=0.0000, R=0.0000, F1=0.0000, n=60
+           microplastics: P=0.7368, R=1.0000, F1=0.8485, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        0       60
+           micropla        0      168
+⏳ No improvement for 5/15 epochs (best F1=0.5052)
+[Class] Epoch 7/50 (LR=2.50e-05): 100%|███████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:25<00:00, 10.42batch/s, loss=0.1224]
+
+[epoch 07] train_loss=0.0473, val_loss=0.5834
+           Overall: acc=0.7368, P=0.3684, R=0.5000, F1=0.4242
+           algae: P=0.0000, R=0.0000, F1=0.0000, n=60
+           microplastics: P=0.7368, R=1.0000, F1=0.8485, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        0       60
+           micropla        0      168
+⏳ No improvement for 6/15 epochs (best F1=0.5052)
+[Class] Epoch 8/50 (LR=2.49e-05): 100%|███████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:24<00:00, 10.68batch/s, loss=0.0450]
+
+[epoch 08] train_loss=0.0398, val_loss=0.6420
+           Overall: acc=0.7368, P=0.3684, R=0.5000, F1=0.4242
+           algae: P=0.0000, R=0.0000, F1=0.0000, n=60
+           microplastics: P=0.7368, R=1.0000, F1=0.8485, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        0       60
+           micropla        0      168
+⏳ No improvement for 7/15 epochs (best F1=0.5052)
+[Class] Epoch 9/50 (LR=2.47e-05): 100%|███████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:23<00:00, 11.02batch/s, loss=0.0109]
+
+[epoch 09] train_loss=0.0373, val_loss=0.6399
+           Overall: acc=0.7368, P=0.3684, R=0.5000, F1=0.4242
+           algae: P=0.0000, R=0.0000, F1=0.0000, n=60
+           microplastics: P=0.7368, R=1.0000, F1=0.8485, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        0       60
+           micropla        0      168
+⏳ No improvement for 8/15 epochs (best F1=0.5052)
+[Class] Epoch 10/50 (LR=2.45e-05): 100%|██████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:24<00:00, 10.89batch/s, loss=0.0268]
+
+[epoch 10] train_loss=0.0287, val_loss=0.7150
+           Overall: acc=0.7368, P=0.3684, R=0.5000, F1=0.4242
+           algae: P=0.0000, R=0.0000, F1=0.0000, n=60
+           microplastics: P=0.7368, R=1.0000, F1=0.8485, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        0       60
+           micropla        0      168
+⏳ No improvement for 9/15 epochs (best F1=0.5052)
+[Class] Epoch 11/50 (LR=2.42e-05): 100%|██████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:24<00:00, 10.78batch/s, loss=0.0018]
+
+[epoch 11] train_loss=0.0309, val_loss=0.6728
+           Overall: acc=0.7368, P=0.3684, R=0.5000, F1=0.4242
+           algae: P=0.0000, R=0.0000, F1=0.0000, n=60
+           microplastics: P=0.7368, R=1.0000, F1=0.8485, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        0       60
+           micropla        0      168
+⏳ No improvement for 10/15 epochs (best F1=0.5052)
+[Class] Epoch 12/50 (LR=2.39e-05): 100%|██████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:23<00:00, 11.04batch/s, loss=0.0041]
+
+[epoch 12] train_loss=0.0237, val_loss=0.7055
+           Overall: acc=0.7368, P=0.3684, R=0.5000, F1=0.4242
+           algae: P=0.0000, R=0.0000, F1=0.0000, n=60
+           microplastics: P=0.7368, R=1.0000, F1=0.8485, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        0       60
+           micropla        0      168
+⏳ No improvement for 11/15 epochs (best F1=0.5052)
+[Class] Epoch 13/50 (LR=2.35e-05): 100%|██████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:23<00:00, 11.21batch/s, loss=0.0394]
+
+[epoch 13] train_loss=0.0292, val_loss=0.6946
+           Overall: acc=0.7368, P=0.3684, R=0.5000, F1=0.4242
+           algae: P=0.0000, R=0.0000, F1=0.0000, n=60
+           microplastics: P=0.7368, R=1.0000, F1=0.8485, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        0       60
+           micropla        0      168
+⏳ No improvement for 12/15 epochs (best F1=0.5052)
+[Class] Epoch 14/50 (LR=2.31e-05): 100%|██████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:23<00:00, 11.22batch/s, loss=0.0027]
+
+[epoch 14] train_loss=0.0194, val_loss=0.7604
+           Overall: acc=0.7368, P=0.3684, R=0.5000, F1=0.4242
+           algae: P=0.0000, R=0.0000, F1=0.0000, n=60
+           microplastics: P=0.7368, R=1.0000, F1=0.8485, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        0       60
+           micropla        0      168
+⏳ No improvement for 13/15 epochs (best F1=0.5052)
+[Class] Epoch 15/50 (LR=2.26e-05): 100%|██████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:23<00:00, 11.19batch/s, loss=0.0022]
+
+[epoch 15] train_loss=0.0217, val_loss=0.7180
+           Overall: acc=0.7368, P=0.3684, R=0.5000, F1=0.4242
+           algae: P=0.0000, R=0.0000, F1=0.0000, n=60
+           microplastics: P=0.7368, R=1.0000, F1=0.8485, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        0       60
+           micropla        0      168
+⏳ No improvement for 14/15 epochs (best F1=0.5052)
+[Class] Epoch 16/50 (LR=2.21e-05): 100%|██████████████████████████████████████████████████████████████████████████████████████████| 262/262 [00:23<00:00, 11.22batch/s, loss=0.0019]
+
+[epoch 16] train_loss=0.0192, val_loss=0.8101
+           Overall: acc=0.7368, P=0.3684, R=0.5000, F1=0.4242
+           algae: P=0.0000, R=0.0000, F1=0.0000, n=60
+           microplastics: P=0.7368, R=1.0000, F1=0.8485, n=168
+           Confusion Matrix:
+                    Predicted
+                       algae micropla
+              algae        0       60
+           micropla        0      168
+⏳ No improvement for 15/15 epochs (best F1=0.5052)
+🛑 Early stopping triggered.
+
+======================================================================
+✅ Classification training complete!
+   Best F1: 0.5052
+   Best Accuracy: 0.7368
+======================================================================

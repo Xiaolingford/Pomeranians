@@ -1,0 +1,31 @@
+======================================================================
+RT-DETR-L SCRATCH BENCHMARK RESULTS
+Initialization: random (no COCO pretraining) — C5 revision
+======================================================================
+
+Model info
+----------------------------------------
+  Architecture: HGNetv2 + Hybrid Transformer Encoder
+  Paradigm:     End-to-end (NMS-free)
+  Parameters:   32,810,186 (32.81M)
+  Model size:   63.1 MB
+  Device:       cuda
+
+Detection metrics (conf=0.5)
+----------------------------------------
+  Precision:    0.9631
+  Recall:       0.9346
+  F1-Score:     0.9486
+  mAP@0.5:      0.9383 (93.83%)
+  mAP@0.5:0.95: 0.8795
+
+Inference efficiency
+----------------------------------------
+  Inference:    33.86 ± 3.18 ms
+  FPS:          29.5
+  Peak VRAM:    855.74 MB
+
+======================================================================
+Table 2 row (copy into paper):
+  RT-DETR-L (scratch) | 32.81M | 93.83% | 0.9486 | 29.5 FPS | 855.74 MB
+======================================================================

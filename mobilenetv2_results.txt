@@ -1,0 +1,11 @@
+Model: mobilenetv2
+Parameters: 2,226,434 (2.23M)
+Accuracy: 1.0000
+Macro F1: 1.0000
+Inference Time: 6.22 ms
+FPS: 160.7
+VRAM: 44.17 MB
+
+Per-class:
+  algae: P=1.0000, R=1.0000, F1=1.0000
+  microplastics: P=1.0000, R=1.0000, F1=1.0000

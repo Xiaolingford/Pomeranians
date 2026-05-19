@@ -1,0 +1,22 @@
+{
+  "model": "YOLOv8s",
+  "weights": "runs/detect/yolov8s_microplastic3/weights/best.pt",
+  "params_total": 11136374,
+  "params_million": 11.14,
+  "model_size_mb": 21.44,
+  "inference_ms_mean": 9.42,
+  "inference_ms_std": 0.97,
+  "fps": 106.2,
+  "peak_vram_mb": 48.94,
+  "img_size": 224,
+  "n_warmup": 50,
+  "n_runs": 500,
+  "device": "cuda",
+  "precision": 0.9882,
+  "recall": 0.9663,
+  "f1": 0.9771,
+  "map50": 0.9796,
+  "map50_95": 0.9326,
+  "conf_thresh": 0.5,
+  "iou_thresh": 0.45
+}

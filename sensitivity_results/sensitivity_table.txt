@@ -1,0 +1,5 @@
+LDBST-MP Hyperparameter Sensitivity Analysis — C6 Revision
+Identical training setup to main model (patience=15, mAP-based early stopping)
+
+heads_2: {'group': 'heads', 'num_heads': 2, 'window_size': 7, 'lambda_box': 5.0, 'params_M': 0.54, 'fps': 219.8, 'ms_mean': 4.55, 'peak_vram': 22.1, 'map50': None, 'f1': None, 'precision': None, 'recall': None}
+heads_8: {'group': 'heads', 'num_heads': 8, 'window_size': 7, 'lambda_box': 5.0, 'params_M': 0.54, 'fps': 220.4, 'ms_mean': 4.54, 'peak_vram': 28.4, 'map50': None, 'f1': None, 'precision': None, 'recall': None}

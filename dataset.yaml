@@ -1,0 +1,7 @@
+names:
+  0: algae
+  1: microplastics
+path: C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\data_yolo
+test: images/test
+train: images/train
+val: images/val

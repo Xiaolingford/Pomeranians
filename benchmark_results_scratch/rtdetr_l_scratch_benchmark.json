@@ -1,0 +1,23 @@
+{
+  "model": "RT-DETR-L",
+  "initialization": "scratch",
+  "weights": "C:\\Users\\User\\Desktop\\Programming languages for vs\\T\\Thesis_Microplastics\\runs\\detect\\rtdetr_l_scratch\\weights\\best.pt",
+  "params_total": 32810186,
+  "params_million": 32.81,
+  "model_size_mb": 63.1,
+  "inference_ms_mean": 33.86,
+  "inference_ms_std": 3.18,
+  "fps": 29.5,
+  "peak_vram_mb": 855.74,
+  "img_size": 224,
+  "n_warmup": 50,
+  "n_runs": 500,
+  "device": "cuda",
+  "precision": 0.9631,
+  "recall": 0.9346,
+  "f1": 0.9486,
+  "map50": 0.9383,
+  "map50_95": 0.8795,
+  "conf_thresh": 0.5,
+  "iou_thresh": 0.45
+}

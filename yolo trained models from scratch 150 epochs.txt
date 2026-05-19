@@ -1,0 +1,91 @@
+======================================================================
+TABLE 2 ROW (copy into paper):
+======================================================================
+  YOLOv8s (scratch) | 11.14M | 96.95% | 0.9655 | 109.8 FPS | 303.89 MB
+======================================================================
+
+======================================================================
+FULL BENCHMARK SUMMARY
+======================================================================
+  model                          YOLOv8s
+  initialization                 scratch
+  weights                        C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\runs\detect\yolov8s_scratch2\weights\best.pt
+  params_total                   11136374
+  params_million                 11.14
+  model_size_mb                  21.44
+  inference_ms_mean              9.11
+  inference_ms_std               0.11
+  fps                            109.8
+  peak_vram_mb                   303.89
+  img_size                       224
+  n_warmup                       50
+  n_runs                         500
+  device                         cuda
+  precision                      0.9881
+  recall                         0.944
+  f1                             0.9655
+  map50                          0.9695
+  map50_95                       0.9126
+  conf_thresh                    0.5
+  iou_thresh                     0.45
+======================================================================
+TABLE 2 ROW (copy into paper):
+======================================================================
+  YOLOv8n (scratch) | 3.01M | 96.82% | 0.9626 | 111.7 FPS | 104.89 MB
+======================================================================
+
+======================================================================
+FULL BENCHMARK SUMMARY
+======================================================================
+  model                          YOLOv8n
+  initialization                 scratch
+  weights                        C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\runs\detect\yolov8n_scratch2\weights\best.pt
+  params_total                   3011238
+  params_million                 3.01
+  model_size_mb                  5.93
+  inference_ms_mean              8.95
+  inference_ms_std               0.15
+  fps                            111.7
+  peak_vram_mb                   104.89
+  img_size                       224
+  n_warmup                       50
+  n_runs                         500
+  device                         cuda
+  precision                      0.9762
+  recall                         0.9494
+  f1                             0.9626
+  map50                          0.9682
+  map50_95                       0.8963
+  conf_thresh                    0.5
+  iou_thresh                     0.45
+
+======================================================================
+TABLE 2 ROW (copy into paper):
+======================================================================
+  YOLOv5n (scratch) | 2.51M | 96.30% | 0.9594 | 100.0 FPS | 92.41 MB
+======================================================================
+
+======================================================================
+FULL BENCHMARK SUMMARY
+======================================================================
+  model                          YOLOv5n
+  initialization                 scratch
+  weights                        C:\Users\User\Desktop\Programming languages for vs\T\Thesis_Microplastics\runs\detect\yolov5n_scratch2\weights\best.pt
+  params_total                   2508854
+  params_million                 2.51
+  model_size_mb                  4.99
+  inference_ms_mean              10.0
+  inference_ms_std               0.15
+  fps                            100.0
+  peak_vram_mb                   92.41
+  img_size                       224
+  n_warmup                       50
+  n_runs                         500
+  device                         cuda
+  precision                      0.9815
+  recall                         0.9382
+  f1                             0.9594
+  map50                          0.963
+  map50_95                       0.8721
+  conf_thresh                    0.5
+  iou_thresh                     0.45

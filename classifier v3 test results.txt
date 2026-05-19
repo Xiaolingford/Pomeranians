@@ -1,0 +1,44 @@
+============================================================
+TEST SET RESULTS
+============================================================
+
+Metric                    Value
+--------------------------------
+Accuracy                 0.9737
+Macro F1                 0.9664
+Weighted F1              0.9738
+
+Class            Precision     Recall         F1    Support
+---------------------------------------------------------
+algae               0.9355     0.9667     0.9508         30
+microplastics       0.9880     0.9762     0.9820         84
+
+Confusion Matrix:
+               Predicted
+                    algae  micropla
+        algae          29         1
+microplastics           2        82
+
+============================================================
+ERROR ANALYSIS
+============================================================
+Total errors: 3/114 (2.63%)
+  algae: 1/30 misclassified (3.33%)
+  microplastics: 2/84 misclassified (2.38%)
+
+============================================================
+SUMMARY FOR YOUR PAPER
+============================================================
+
+Model: LDBST-MP (Classification)
+Test Set Size: 114 images
+Classes: algae, microplastics
+
+Results:
+  Accuracy:  97.37%
+  Macro F1:  0.9664
+
+Per-Class Performance:
+
+  algae: P=0.9355, R=0.9667, F1=0.9508
+  microplastics: P=0.9880, R=0.9762, F1=0.9820

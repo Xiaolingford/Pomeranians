@@ -1,0 +1,11 @@
+Model: efficientnet_b0
+Parameters: 4,010,110 (4.01M)
+Accuracy: 1.0000
+Macro F1: 1.0000
+Inference Time 10.60 ms
+FPS: 94.3
+VRAM: 57.99 MB
+
+Per-class:
+  algae: P=1.0000, R=1.0000, F1=1.0000
+  microplastics: P=1.0000, R=1.0000, F1=1.0000

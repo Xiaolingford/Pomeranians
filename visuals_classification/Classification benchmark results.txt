@@ -1,0 +1,13 @@
+============================================================
+Classification Benchmark Results
+==================================================
+
+Task: classification
+Model: classifier_v3.pth
+Parameters: 571,586 (0.57M)
+Model Size: 2.21 MB
+
+GPU: NVIDIA GeForce RTX 3060
+  Inference Time: 4.20 ± 0.09 ms
+  FPS: 238.3
+  Peak VRAM: 24.67 MB

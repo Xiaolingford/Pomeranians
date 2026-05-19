@@ -1,0 +1,35 @@
+{
+  "swin_only": {
+    "params_M": 1.26,
+    "fps": 256.0,
+    "ms_mean": 3.91,
+    "ms_std": 0.14,
+    "peak_vram": 32.2,
+    "map50": null,
+    "f1": null,
+    "precision": null,
+    "recall": null
+  },
+  "cnn_only": {
+    "params_M": 0.51,
+    "fps": 890.6,
+    "ms_mean": 1.12,
+    "ms_std": 0.05,
+    "peak_vram": 16.3,
+    "map50": null,
+    "f1": null,
+    "precision": null,
+    "recall": null
+  },
+  "no_fusion": {
+    "params_M": 0.56,
+    "fps": 213.2,
+    "ms_mean": 4.69,
+    "ms_std": 0.06,
+    "peak_vram": 24.6,
+    "map50": null,
+    "f1": null,
+    "precision": null,
+    "recall": null
+  }
+}

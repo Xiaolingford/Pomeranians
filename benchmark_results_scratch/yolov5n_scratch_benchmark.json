@@ -1,0 +1,23 @@
+{
+  "model": "YOLOv5n",
+  "initialization": "scratch",
+  "weights": "runs/detect/yolov5n_scratch/weights/best.pt",
+  "params_total": 2508854,
+  "params_million": 2.51,
+  "model_size_mb": 4.99,
+  "inference_ms_mean": 10.59,
+  "inference_ms_std": 1.08,
+  "fps": 94.4,
+  "peak_vram_mb": 12.04,
+  "img_size": 224,
+  "n_warmup": 50,
+  "n_runs": 500,
+  "device": "cuda",
+  "precision": 0.988,
+  "recall": 0.9384,
+  "f1": 0.9625,
+  "map50": 0.9665,
+  "map50_95": 0.8636,
+  "conf_thresh": 0.5,
+  "iou_thresh": 0.45
+}

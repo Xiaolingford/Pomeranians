@@ -1,0 +1,5 @@
+Model: yolov5n
+Parameters: 2,508,854 (2.51M)
+Model Size: 4.99 MB
+FPS: 90.8
+VRAM: 12.48 MB
